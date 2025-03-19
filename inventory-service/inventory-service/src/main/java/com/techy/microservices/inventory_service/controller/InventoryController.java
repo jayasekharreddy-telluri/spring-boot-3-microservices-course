@@ -17,7 +17,7 @@ public class InventoryController {
         this.inventoryService = inventoryService;
     }
 
-    @GetMapping("/check")
+    @GetMapping
     public ResponseEntity<Boolean> isInStock(@RequestParam String skuCode, @RequestParam int quantity) {
         boolean inStock = inventoryService.isInstock(skuCode, quantity);
         return ResponseEntity.ok(inStock);
