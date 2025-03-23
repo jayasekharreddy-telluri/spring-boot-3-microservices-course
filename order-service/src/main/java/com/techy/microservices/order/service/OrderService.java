@@ -8,6 +8,8 @@ import com.techy.microservices.order.repos.OrderRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.UUID;
+
 @Service
 public class OrderService {
 
@@ -29,7 +31,7 @@ public class OrderService {
         if (isProductInStock){
 
             Order order = new Order();
-            order.setOrderNumber(orderRequest.orderNumber());
+            order.setOrderNumber(UUID.randomUUID().toString());
             order.setSkuCode(orderRequest.skuCode());
             order.setPrice(orderRequest.price());
             order.setQuantity(orderRequest.quantity());
