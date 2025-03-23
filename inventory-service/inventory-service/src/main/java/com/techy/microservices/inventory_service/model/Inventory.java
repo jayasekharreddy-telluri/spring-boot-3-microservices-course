@@ -14,11 +14,17 @@ public class Inventory {
     public Inventory() {
     }
 
+    public Inventory(String skuCode, Integer quantity) {
+        this.skuCode = skuCode;
+        this.quantity = quantity;
+    }
+
     public Inventory(Long id, String skuCode, Integer quantity) {
         this.id = id;
         this.skuCode = skuCode;
         this.quantity = quantity;
     }
+
 
     public Long getId() {
         return id;
