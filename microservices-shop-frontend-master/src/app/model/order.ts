@@ -1,6 +1,6 @@
 export interface Order {
   id?: number;
-  orderNumber?: "macbook_pro_16";
+  orderNumber?:string;
   skuCode: string;
   price: number;
   quantity: number;
